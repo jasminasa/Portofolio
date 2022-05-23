@@ -1,0 +1,566 @@
+* {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ----------- Portofolio ---------- */
+.portofolio {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F9EBC8;
+    font-family: 'Kalam', cursive;
+}
+
+
+
+/* ----- Navbar ----- */
+.portofolio .navbar {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.portofolio .navbar .logo {
+    margin-left: 50px;
+}
+.portofolio .navbar .menu{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.portofolio .navbar li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 10px;
+
+}
+.portofolio .navbar li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+/* ----- Home Section ----- */
+.portofolio .home-section {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-section .home-content {
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: "homeText homeText homeText  homePict homePict";
+}
+
+
+.home-content .picture-2 {
+    display: none !important;
+}
+
+
+.home-content .text-content {
+    grid-area: homeText;
+    padding: 0px 50px 0px 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.home-section .text-content h1{
+    grid-area: homeText;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+.home-section .text-content h1 span {
+    color: rgb(136, 66, 0);
+}
+.home-section .text-content p {
+    font-size: 20px;
+    letter-spacing: .5px;
+}
+
+
+.home-content .picture-content {
+    grid-area: homePict;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.home-content .picture-content .image-h {
+    width: 340px;
+    height: 340px;
+    padding: 10px;
+    border: 5px dashed rgb(109, 53, 0);
+    border-radius: 50%;
+}
+.home-content .picture-content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.home-content .to-bottom {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(0 -50%);
+}
+.home-content .to-bottom .button-bottom{
+    width: fit-content;
+    height: fit-content;
+    animation: upDown 1s infinite alternate;
+}
+.home-content .to-bottom .button-bottom a {
+    color: rgb(109, 53, 0);
+    font-size: 30px;
+}
+@keyframes upDown {
+    from { margin-top: 0px; }
+    to { margin-top: 10px;}
+}
+
+
+
+
+/* ----- About Section ----- */
+.portofolio .about-section {
+    width: 100%;
+    height: 110vh;
+}
+.about-section .about-content {
+    width: 100%;
+    height: 100%;
+    background-color: #FEFBE7;
+    margin-top: -70px;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.about-content .about-fill {
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 40% 60%; 
+    grid-template-areas: "aboutPict aboutText ";
+}
+
+
+.about-content .picture-content {
+    grid-area: aboutPict;
+    width: 100%;
+    height: fit-content;
+    padding-left: 50px;
+}
+.about-content .picture-content .image-a {
+    width: 320px;
+    height: auto;
+    padding: 10px;
+    border: 5px solid rgb(109, 53, 0);
+    border-radius: 20px;
+}
+.about-content .picture-content .image-a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-content .text-content {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+.about-content .text-content h1 {
+    font-size: 40px;
+    color: rgb(136, 66, 0);
+}
+.about-content .text-content p {
+    font-size: 20px;
+    letter-spacing: .5px;
+}
+
+
+
+
+
+/* ----- Project Section ----- */
+.portofolio .project-section {
+    width: 100%;
+    height: auto;
+    margin-bottom: -230px;
+}
+.project-section .project-content {
+    width: 100%;
+    height: auto;
+    background-color: #DAE5D0;
+    margin-top: -10px;
+    padding-top: 50px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+.project-section .project-content h1 {
+    margin-bottom: 50px;
+}
+
+
+.project-content .my-project {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.project-content .my-project .card-project {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding-bottom: 10px;
+    transition: .5s;
+}
+.project-content .my-project .card-project:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.my-project .card-project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.my-project .card-project .card-text {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.my-project .card-project .card-text h2{
+    margin-bottom: 10px;
+}
+.my-project .card-project button {
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+.my-project .card-project button:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.project-content .my-skill {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+.project-content .my-skill h1 {
+    margin-bottom: 50px;
+}
+.project-content .my-skill .skill-content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 50px;
+}
+.project-content .my-skill .skill-content {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+/* ----- Footer Section ----- */
+.portofolio .footer-section {
+    width: 100%;
+    height: auto;
+}
+.footer-section .footer-content {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    background-color: #A0BCC2;
+    margin-top: -50px;
+}
+
+
+.footer-content .sosmed {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer-content .sosmed li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 15px;
+}
+.footer-content .sosmed li a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+    transition: .5s;
+}
+.footer-content .sosmed li a:hover,
+.footer-content .copyright a:hover {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.footer-content .copyright {
+    max-width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content .copyright a {
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+
+
+
+@media only screen and (max-width: 900px) { 
+    /* ----- Home Section ----- */
+    .portofolio .home-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-section .home-content {
+        width: 80%;
+        height: auto;
+        display: block;
+    }
+
+
+    .home-content .picture-2 {
+        display: block !important;
+    }
+    .home-content .picture-1 {
+        display: none !important;
+    }
+    
+    
+    .home-content .text-content {
+        margin-top: 50px;
+        padding: 0px 0px 0px 0px;
+        text-align: center;
+    }
+    
+    
+    .home-content .picture-content .image-h {
+        margin: 0 auto !important;
+    }
+
+
+    /* ----- About Section ----- */
+    .portofolio .about-section {
+        width: 100%;
+        height: 50vh;
+    }
+    .about-section .about-content {
+        width: 100%;
+        height: 100%;
+        background-color: #FEFBE7;
+        margin-top: -70px;
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+    }
+    .about-content .about-fill {
+        width: 80%;
+        height: fit-content;
+        display: block;
+    }
+
+
+    .about-content .picture-content {
+        display: none;
+    }
+
+
+    .about-content .text-content {
+        padding-right: 0px;
+    }
+
+
+    /* ----- Project Section ----- */
+    .portofolio .project-section {
+        width: 100%;
+        height: auto;
+        margin-bottom: -230px;
+    }
+    .project-section .project-content {
+        width: 100%;
+        height: auto;
+        background-color: #DAE5D0;
+        margin-top: -10px;
+        padding-top: 50px;
+        padding-bottom: 200px;
+        text-align: center;
+    }
+    .project-section .project-content h1 {
+        margin-bottom: 50px;
+    }
+
+
+    .project-content .my-project {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .project-content .my-project .card-project {
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) { 
+    /* ----- Navbar ----- */
+    .portofolio .navbar .logo {
+        margin-left: 30px;
+    }
+    .portofolio .navbar .menu{
+        margin-right: 20px;
+    }
+
+
+
+    /* ----- Home Section ----- */
+    .portofolio .home-section {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    .home-section .home-content {
+        height: auto;
+    }
+
+    .home-content .picture-content .image-h {
+        display: flex;
+        align-items: center;
+        width: 270px;
+        height: 270px;
+    }
+    
+    .home-content .text-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content .to-bottom {
+        bottom: 100px;
+    }
+   
+
+
+    /* ----- About Section ----- */
+    .portofolio .about-section {
+        height: auto;
+        margin-bottom: -100px;
+    }
+    .about-section .about-content {
+        margin-top: -50px;
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+    .about-content .about-fill {
+        width: 80%;
+        height: fit-content;
+        display: block;
+    }
+
+
+
+    /* ----- Project Section ----- */
+    .portofolio .project-section {
+        margin-bottom: -100px;
+    }
+    .project-section .project-content {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+
+    .project-content .my-project {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+
+    .project-content .my-skill {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .project-content .my-skill h1 {
+        margin-bottom: 50px;
+    }
+    .project-content .my-skill .skill-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+
+
+    /* ----- Footer Section ----- */
+    .footer-section .footer-content {
+        margin-top: -10px;
+    }
+
+    .footer-content .sosmed {
+        margin-bottom: 50px;
+    }
+    .footer-content .sosmed li a {
+        color: white;
+    }
+
+    .footer-content .copyright {
+        text-align: center;
+        flex-direction: column;
+    }
+    .footer-content .copyright .designBy {
+        margin-bottom: 20px;
+    }
+}
